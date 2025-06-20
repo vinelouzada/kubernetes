@@ -10,12 +10,6 @@ spec:
       image: mysql:8.0.36
       ports:
         - containerPort: 3306
-      env:
-        - name: "MYSQL_ROOT_PASSWORD"
-          value: "7777"
-
-        - name: "MYSQL_DATABASE"
-          value: "test"
-
-        - name: "MYSQL_PASSWORD"
-          value: "7777"
+      envFrom:
+        - configMapRef:
+            name: db-configmap
