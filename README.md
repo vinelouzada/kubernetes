@@ -42,3 +42,9 @@ Delete:
 ```
 kubectl delete all --all
 ```
+
+ReplicaSets:
+
+```
+kubectl apply -f app-replica-set.yaml
+```

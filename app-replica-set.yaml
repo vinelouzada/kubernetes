@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: pod-hello-replicaset
+spec:
+  template:
+    metadata:
+      name: pod-hello
+      labels:
+        app: pod-hello
+    spec:
+      containers:
+        - name: nginx
+          image: nginxdemos/hello:latest
+          ports:
+            - containerPort: 80
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pod-hello
