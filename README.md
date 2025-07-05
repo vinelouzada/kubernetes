@@ -63,6 +63,14 @@ Deployment
 kubectl apply -f app-deployment-oficial.yaml
 ```
 
+To show deployment history
+
 ```
 kubectl rollout history deployment pod-hello-deployment
+```
+
+To select another version history
+
+```
+kubectl rollout undo deployment pod-hello-deployment
 ```
