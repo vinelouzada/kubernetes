@@ -40,6 +40,10 @@ Copy internal-ip from minikube and past in browser with port 30000
 Delete:
 
 ```
+kubectl delete pod pod-hello
+```
+
+```
 kubectl delete all --all
 ```
 
@@ -47,4 +51,8 @@ ReplicaSets:
 
 ```
 kubectl apply -f app-replica-set.yaml
+```
+
+```
+kubectl get rs
 ```
