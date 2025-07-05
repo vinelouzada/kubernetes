@@ -56,3 +56,13 @@ kubectl apply -f app-replica-set.yaml
 ```
 kubectl get rs
 ```
+
+Deployment
+
+```
+kubectl apply -f app-deployment-oficial.yaml
+```
+
+```
+kubectl rollout history deployment pod-hello-deployment
+```

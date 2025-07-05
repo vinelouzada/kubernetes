@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-hello-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: pod-hello
+      labels:
+        app: pod-hello
+    spec:
+      containers:
+        - name: nginx
+          image: nginxdemos/hello:latest
+          ports:
+            - containerPort: 80
+
+  selector:
+    matchLabels:
+      app: pod-hello
