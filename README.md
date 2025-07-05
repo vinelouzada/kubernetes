@@ -1,5 +1,11 @@
 # Kubernetes
 
+Initialize minikube
+
+```
+minikube start
+```
+
 To run database:
 
 ```
@@ -30,3 +36,9 @@ kubectl get nodes -o wide
 ```
 
 Copy internal-ip from minikube and past in browser with port 30000
+
+Delete:
+
+```
+kubectl delete all --all
+```
